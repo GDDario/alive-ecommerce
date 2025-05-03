@@ -1,6 +1,14 @@
+'use client';
+
 import React from "react";
-import {TiUserOutline} from "react-icons/ti";
 import {Button} from "@/components/ui/button";
+import styled from "styled-components";
+
+const LinkButton = styled(Button)`
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: normal;
+`
 
 const Navigation: React.FC = () => {
     return (
@@ -8,37 +16,37 @@ const Navigation: React.FC = () => {
             <ul className="flex gap-4 text-lg">
                 <li>
                     <a href="/">
-                        <Button variant="link" className="cursor-pointer text-md">
+                        <LinkButton variant="link">
                             Home
-                        </Button>
+                        </LinkButton>
                     </a>
                 </li>
                 <li>
                     <a href="/categoria/cabeca">
-                        <Button variant="link" className="cursor-pointer text-md">
+                        <LinkButton variant="link">
                             Cabeça
-                        </Button>
+                        </LinkButton>
                     </a>
                 </li>
                 <li>
                     <a href="/categoria/torso">
-                        <Button variant="link" className="cursor-pointer text-md">
+                        <LinkButton variant="link">
                             Torso
-                        </Button>
+                        </LinkButton>
                     </a>
                 </li>
                 <li>
                     <a href="/categoria/pernas">
-                        <Button variant="link" className="cursor-pointer text-md">
+                        <LinkButton variant="link">
                             Pernas
-                        </Button>
+                        </LinkButton>
                     </a>
                 </li>
                 <li>
                     <a href="/categorias/pes">
-                        <Button variant="link" className="cursor-pointer text-md">
+                        <LinkButton variant="link">
                             Pés
-                        </Button>
+                        </LinkButton>
                     </a>
                 </li>
             </ul>
