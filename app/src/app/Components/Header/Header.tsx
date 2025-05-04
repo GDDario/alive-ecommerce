@@ -1,9 +1,10 @@
 import React from "react";
-import {HiOutlineQuestionMarkCircle} from "react-icons/hi2";
-import {HiOutlineMagnifyingGlass} from "react-icons/hi2";
-import {HiShoppingBag} from "react-icons/hi2";
-import {HiOutlineUserCircle} from "react-icons/hi2";
-import {HiOutlineShoppingBag} from "react-icons/hi2";
+import {
+    HiOutlineMagnifyingGlass,
+    HiOutlineQuestionMarkCircle,
+    HiOutlineShoppingBag,
+    HiOutlineUserCircle
+} from "react-icons/hi2";
 import {Button} from "@/components/ui/button";
 import Navigation from "@/app/Components/Header/Navigation";
 
