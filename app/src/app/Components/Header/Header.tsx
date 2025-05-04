@@ -1,12 +1,6 @@
 import React from "react";
-import {
-    HiOutlineMagnifyingGlass,
-    HiOutlineQuestionMarkCircle,
-    HiOutlineShoppingBag,
-    HiOutlineUserCircle
-} from "react-icons/hi2";
-import {Button} from "@/components/ui/button";
 import Navigation from "@/app/Components/Header/Navigation";
+import HeaderOptions from "@/app/Components/Header/HeaderOptions";
 
 const Header: React.FC = () => {
     return (
@@ -20,25 +14,7 @@ const Header: React.FC = () => {
 
             <Navigation/>
 
-            <div className="flex gap-2 [&_svg]:size-6">
-                <Button variant="ghost" className="rounded-button h-10 w-10">
-                    <HiOutlineQuestionMarkCircle className="[&_svg]:size-1"/>
-                </Button>
-
-                <Button variant="ghost" className="rounded-button h-10 w-10">
-                    <HiOutlineMagnifyingGlass className="[&_svg]:size-1"/>
-                </Button>
-
-                <Button variant="ghost" className="rounded-button h-10 w-10">
-                    <HiOutlineShoppingBag className="[&_svg]:size-1"/>
-                </Button>
-
-                <a href="/login">
-                    <Button variant="ghost" className="rounded-button h-10 w-10">
-                        <HiOutlineUserCircle className="[&_svg]:size-1"/>
-                    </Button>
-                </a>
-            </div>
+            <HeaderOptions/>
         </nav>
     );
 };
