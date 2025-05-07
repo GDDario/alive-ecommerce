@@ -3,7 +3,9 @@ import {HiMiniStar} from "react-icons/hi2";
 import productsMock from "../../mock/products-mock";
 import React from "react";
 import ProductsGrid from "@/app/Components/ProductsGrid/ProductsGrid";
-import { FaRegFaceGrinStars } from "react-icons/fa6";
+import {FaRegFaceGrinStars} from "react-icons/fa6";
+import {Separator} from "@/components/ui/separator";
+import Testimonial from "@/app/Components/Testimonial/Testimonial";
 
 export default function Home() {
     const products = productsMock;
@@ -27,7 +29,7 @@ export default function Home() {
 
             <section className="mt-10">
                 <div className="flex items-start gap-2">
-                    <FaRegFaceGrinStars className="" size={24}/>
+                    <FaRegFaceGrinStars size={24}/>
                     <h2 className="text-xl">Mais populares</h2>
                 </div>
 
@@ -36,6 +38,10 @@ export default function Home() {
                 <div className="mt-6 flex gap-6">
                     <ProductsGrid products={products}/>
                 </div>
+
+                <Separator className="my-10"/>
+
+                <Testimonial/>
             </section>
         </div>
     );
