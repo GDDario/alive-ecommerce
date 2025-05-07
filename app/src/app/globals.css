@@ -121,6 +121,10 @@
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .glassy-panel {
   background-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);

@@ -10,7 +10,7 @@ const LinkItem: React.FC<LinkItemProps> = ({location, text}: LinkItemProps) => {
     return (
         <li>
             <a href={location}>
-                <Button variant="link" className="font-normal text-md cursor-pointer">
+                <Button variant="link" className="font-normal text-md">
                     {text}
                 </Button>
             </a>

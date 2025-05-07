@@ -12,22 +12,20 @@ type HeadingSliderProps = {
  */
 const HeadingSlider: React.FC<HeadingSliderProps> = ({images, className}: HeadingSliderProps) => {
     return (
-        <article>
-            <Carousel className={`relative ${className}`}>
-                <CarouselContent>
-                    {images.map((image: string) => (
-                        <CarouselItem>
-                            <Card className="h-[375px] p-0 overflow-hidden">
-                                <img src={image} alt="" className="object-cover"/>
-                            </Card>
-                        </CarouselItem>))}
+        <Carousel className={`relative ${className}`} role="article">
+            <CarouselContent>
+                {images.map((image: string, index) => (
+                    <CarouselItem key={`${image}-${index}`}>
+                        <Card className="h-[375px] overflow-hidden">
+                            <img src={image} alt="" className="object-cover"/>
+                        </Card>
+                    </CarouselItem>))}
 
-                </CarouselContent>
+            </CarouselContent>
 
-                <CarouselNext className="bg-zinc-800 text-white right-8 cursor-pointer" />
-                <CarouselPrevious className="bg-zinc-800 text-white left-8 cursor-pointer"/>
-            </Carousel>
-        </article>
+            <CarouselNext className="bg-zinc-800 text-white right-8 cursor-pointer"/>
+            <CarouselPrevious className="bg-zinc-800 text-white left-8 cursor-pointer"/>
+        </Carousel>
     );
 };
 
