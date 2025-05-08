@@ -20,7 +20,7 @@ const Newsletter: React.FC = () => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            email: "aaa",
+            email: "",
         },
     });
 
@@ -66,7 +66,11 @@ const Newsletter: React.FC = () => {
                         )}
                     />
 
-                    <Button type="submit" className="mt-4 flex gap-3">
+                    <Button
+                        type="submit"
+                        className="mt-4 flex gap-3"
+                        disabled={!form.formState.isValid}
+                    >
                         Enviar
 
                         {!loading ? <SendHorizonal className="w-[16px]"/> :
