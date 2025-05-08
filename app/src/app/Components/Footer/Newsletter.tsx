@@ -7,7 +7,7 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
-import {Send, SendHorizonal, Loader} from "lucide-react";
+import {SendHorizonal} from "lucide-react";
 
 const formSchema = z.object({
     email: z.string().email({message: "E-mail inválido"}),
@@ -49,7 +49,8 @@ const Newsletter: React.FC = () => {
                             <FormItem>
                                 <FormLabel className={success ? "text-green-300" : "text-white"}>Email</FormLabel>
                                 <FormControl>
-                                    <Input {...field} placeholder="user@email.com" className={success ? "text-green-300 border-green-300" : "text-white"}/>
+                                    <Input {...field} placeholder="user@email.com"
+                                           className={success ? "text-green-300 border-green-300" : "text-white"}/>
                                 </FormControl>
 
                                 <FormDescription>

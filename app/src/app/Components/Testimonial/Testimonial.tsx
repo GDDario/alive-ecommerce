@@ -18,7 +18,8 @@ const Testimonial: React.FC = () => {
                     {
                         testimonials.map((testimonial: TestimonialType) => (
                             <CarouselItem key={testimonial.uuid} className="md:basis-1/3 lg:basis-1/4 select-none">
-                                <Card key={testimonial.uuid} role="article" className="w-[400px] h-[150px] p-4 flex justify-between">
+                                <Card key={testimonial.uuid} role="article"
+                                      className="w-[400px] h-[150px] p-4 flex justify-between">
                                     <div className="flex items-end gap-4">
                                         <img
                                             src={testimonial.img}
