@@ -29,7 +29,7 @@ const products: Product[] = [
                 "hex_color": "#000",
                 "size": "G",
                 "gender": "U",
-                "price": 99.9,
+                "price": 101.9,
                 "quantity": 40,
                 "images": [
                     "https://placehold.co/400x400/EEE/31343C",

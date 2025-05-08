@@ -32,9 +32,7 @@ export default function RootLayout({
             >
             <Header/>
 
-            <main className="px-8 py-24">
-                {children}
-            </main>
+            {children}
             </body>
         </NextTooltipProvider>
         </html>

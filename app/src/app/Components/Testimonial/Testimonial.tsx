@@ -17,7 +17,7 @@ const Testimonial: React.FC = () => {
                 <CarouselContent>
                     {
                         testimonials.map((testimonial: TestimonialType) => (
-                            <CarouselItem className="md:basis-1/3 lg:basis-1/4 select-none">
+                            <CarouselItem key={testimonial.uuid} className="md:basis-1/3 lg:basis-1/4 select-none">
                                 <Card key={testimonial.uuid} role="article" className="w-[400px] h-[150px] p-4 flex justify-between">
                                     <div className="flex items-end gap-4">
                                         <img
@@ -29,8 +29,8 @@ const Testimonial: React.FC = () => {
 
                                         <div className="flex gap-1 mb-1">
                                             {
-                                                Array.from({length: testimonial.stars}).map((_) =>
-                                                    <HiMiniStar className="text-yellow-300" size={20}/>)
+                                                Array.from({length: testimonial.stars}).map((_: any) =>
+                                                    <HiMiniStar key={_} className="text-yellow-300" size={20}/>)
                                             }
                                         </div>
                                     </div>
