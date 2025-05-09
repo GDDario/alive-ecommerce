@@ -17,7 +17,7 @@ const Certificates: React.FC = () => {
             <div className="flex gap-2">
                 <a href="#"><img src="img/certs/abvtex.avif" alt="Abvtex certification" className="w-18 h-18"/></a>
                 <a href="#"><img src="img/certs/eu-reciclo.avif" alt="Eu Reclico certification" className="w-18 h-18"/></a>
-            </div>   000111100111110000000
+            </div>
         </div>
     );
 };

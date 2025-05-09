@@ -12,42 +12,38 @@ export default function Home() {
     const products = productsMock;
 
     return (
-        <div className="font-[family-name:var(--font-geist-sans)]">
-            <div className="px-8 pt-24 py-12">
-                <HeadingSlider images={['img/clothes-1.jpg', 'img/clothes-2.jpg']}/>
+        <div className="px-8">
+            <HeadingSlider images={['img/clothes-1.jpg', 'img/clothes-2.jpg']}/>
 
-                <section className="mt-10">
-                    <div className="flex items-start gap-2">
-                        <HiMiniStar className="text-yellow-300" size={24}/>
-                        <h2 className="text-xl">Em promoção</h2>
-                    </div>
+            <section className="mt-10">
+                <div className="flex items-start gap-2">
+                    <HiMiniStar className="text-yellow-300" size={24}/>
+                    <h2 className="text-xl">Em promoção</h2>
+                </div>
 
-                    <p>Confira os nossos items em promoção essa semana. Não perca!</p>
+                <p>Confira os nossos items em promoção essa semana. Não perca!</p>
 
-                    <div className="mt-6 flex gap-6">
-                        <ProductsGrid products={products}/>
-                    </div>
-                </section>
+                <div className="mt-6 flex gap-6">
+                    <ProductsGrid products={products}/>
+                </div>
+            </section>
 
-                <section className="mt-10">
-                    <div className="flex items-start gap-2">
-                        <FaRegFaceGrinStars size={24}/>
-                        <h2 className="text-xl">Mais populares</h2>
-                    </div>
+            <section className="mt-10">
+                <div className="flex items-start gap-2">
+                    <FaRegFaceGrinStars size={24}/>
+                    <h2 className="text-xl">Mais populares</h2>
+                </div>
 
-                    <p>Confira os nossos items em promoção essa semana. Não perca!</p>
+                <p>Confira os nossos items em promoção essa semana. Não perca!</p>
 
-                    <div className="mt-6 flex gap-6">
-                        <ProductsGrid products={products}/>
-                    </div>
+                <div className="mt-6 flex gap-6">
+                    <ProductsGrid products={products}/>
+                </div>
 
-                    <Separator className="my-10"/>
+                <Separator className="my-10"/>
 
-                    <Testimonial/>
-                </section>
-            </div>
-
-            <Footer/>
+                <Testimonial/>
+            </section>
         </div>
     );
 }

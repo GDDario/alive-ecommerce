@@ -3,6 +3,8 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import Header from "@/app/Components/Header/Header";
 import NextTooltipProvider from "@/app/providers/NextTooltipProvider";
+import Footer from "@/app/Components/Footer/Footer";
+import React from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -20,21 +22,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+   children,
+}: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="pt">
-        <NextTooltipProvider>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-            <Header/>
+            <NextTooltipProvider>
+                <body
+                    className={`${geistSans.variable} ${geistMono.variable} antialiasedfont-[family-name:var(--font-geist-sans)] `}
+                >
+                    <Header/>
+                        <main className="pt-24 py-12">
+                            {children}
+                        </main>
+                    <Footer/>
+                </body>
+            </NextTooltipProvider>
 
-            {children}
-            </body>
-        </NextTooltipProvider>
         </html>
     );
 }
