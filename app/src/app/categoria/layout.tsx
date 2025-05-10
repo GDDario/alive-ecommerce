@@ -1,11 +1,23 @@
 import React from "react";
+import SideMenu from "@/app/Components/SideMenu/SideMenu";
+import {FilterProvider} from "@/app/context/FilterContext";
 
-const CategoryLayout: React.FC = () => {
+type CategoryLayoutProps = {
+    children: React.ReactNode;
+};
+
+const CategoryLayout: React.FC<CategoryLayoutProps> = ({
+    children,
+}: CategoryLayoutProps) => {
     return (
-        <div className="pt-24 pb-12">
+        <FilterProvider>
+            <div className="flex gap-8 relative">
+                <SideMenu/>
 
-        </div>
-    )
+                {children}
+            </div>
+        </FilterProvider>
+    );
 };
 
 export default CategoryLayout;

@@ -6,7 +6,6 @@ import ProductsGrid from "@/app/Components/ProductsGrid/ProductsGrid";
 import {FaRegFaceGrinStars} from "react-icons/fa6";
 import {Separator} from "@/components/ui/separator";
 import Testimonial from "@/app/Components/Testimonial/Testimonial";
-import Footer from "@/app/Components/Footer/Footer";
 
 export default function Home() {
     const products = productsMock;
