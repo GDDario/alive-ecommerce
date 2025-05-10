@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import Header from "@/app/Components/Header/Header";
-import NextTooltipProvider from "@/app/providers/NextTooltipProvider";
+import {TooltipProvider} from "@/components/ui/tooltip";
 import Footer from "@/app/Components/Footer/Footer";
 import React from "react";
 
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt">
-            <NextTooltipProvider>
+            <TooltipProvider>
                 <body
                     className={`${geistSans.variable} ${geistMono.variable} antialiasedfont-[family-name:var(--font-geist-sans)] `}
                 >
@@ -38,7 +38,7 @@ export default function RootLayout({
                         </main>
                     <Footer/>
                 </body>
-            </NextTooltipProvider>
+            </TooltipProvider>
 
         </html>
     );
