@@ -12,25 +12,25 @@ const HeadFiltersMock = (): any[] => [
         "minimum": 0,
         "maximum": 1000,
     },
-    // {
-    //     "type": "checkbox",
-    //     "name": "colors",
-    //     "label": "Cores",
-    //     "options": [
-    //         {
-    //             "label": "Preto",
-    //             "value": "black",
-    //             "quantity": 30,
-    //             "color": "#000"
-    //         },
-    //         {
-    //             "label": "Azul",
-    //             "value": "blue",
-    //             "quantity": 40,
-    //             "color": "#00f"
-    //         },
-    //     ],
-    // },
+    {
+        "type": "checkbox",
+        "name": "colors",
+        "label": "Cores",
+        "options": [
+            {
+                "label": "Preto",
+                "value": "black",
+                "quantity": 30,
+                "color": "#000"
+            },
+            {
+                "label": "Azul",
+                "value": "blue",
+                "quantity": 40,
+                "color": "#00f"
+            },
+        ],
+    },
     // {
     //     "type": "checkbox",
     //     "name": "size",

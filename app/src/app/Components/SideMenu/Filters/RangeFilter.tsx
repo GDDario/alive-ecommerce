@@ -1,8 +1,6 @@
-import React, {FormEvent, useState} from "react";
-import {FormControl, FormDescription, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
+import React from "react";
+import {FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Slider} from "@/components/ui/slider";
-import {SliderRange} from "@radix-ui/react-slider";
 import {Controller} from "react-hook-form";
 
 type RangeFilterProps = {

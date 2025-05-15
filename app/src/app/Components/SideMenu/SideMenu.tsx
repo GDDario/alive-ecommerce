@@ -1,11 +1,9 @@
 'use client';
 
-import React, {ReactNode, useEffect} from "react";
+import React, {useEffect} from "react";
 import FiltersDictionary from "@/app/Components/SideMenu/FiltersDictionary";
 import {useFilters} from "@/app/context/FilterContext";
-import RangeFilter from "@/app/Components/SideMenu/Filters/RangeFilter";
 import {useForm} from "react-hook-form";
-import {z} from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {Form} from "@/components/ui/form";
 import {buildZodSchemaFromFilters} from "@/utils/zodBuilder";
