@@ -1,6 +1,5 @@
 import React from "react";
 import {FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Slider} from "@/components/ui/slider";
 import {Controller} from "react-hook-form";
 import {CheckboxOption} from "@/types/filters";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -12,9 +11,9 @@ type CheckboxFilterProps = {
     control: any;
 };
 
-const CheckboxFilter: React.FC<CheckboxFilterProps> = ({ name, label, options, control }) => {
+const CheckboxFilter: React.FC<CheckboxFilterProps> = ({name, label, options, control}) => {
     const generateLabelText = (option: CheckboxOption): string => {
-        let text = option.label;
+        let text: string = option.label;
 
         if (option.quantity !== undefined) {
             text += ` (${option.quantity})`;
@@ -22,10 +21,6 @@ const CheckboxFilter: React.FC<CheckboxFilterProps> = ({ name, label, options, c
 
         return text;
     }
-
-    // const generateCheckboxStyle = (color?: string): object => {
-    //
-    // }
 
     return (
         <FormItem>
@@ -35,7 +30,7 @@ const CheckboxFilter: React.FC<CheckboxFilterProps> = ({ name, label, options, c
                 control={control}
                 name={name}
                 defaultValue={[]}
-                render={({ field }) => {
+                render={({field}) => {
                     const value = field.value ?? [];
 
                     return (
@@ -56,9 +51,10 @@ const CheckboxFilter: React.FC<CheckboxFilterProps> = ({ name, label, options, c
                                         <Checkbox
                                             checked={isChecked}
                                             onCheckedChange={handleChange}
-                                            style={{backgroundColor: option.color ? option.color: "black"}}
+                                            style={{backgroundColor: option.color ? option.color : "black"}}
                                         />
-                                        <span className="text-sm">{generateLabelText(option)}</span>
+
+                                        <span className="text-sm" onClick={() => handleChange()}>{generateLabelText(option)}</span>
                                     </div>
                                 );
                             })}
@@ -67,7 +63,7 @@ const CheckboxFilter: React.FC<CheckboxFilterProps> = ({ name, label, options, c
                 }}
             />
 
-            <FormMessage />
+            <FormMessage/>
         </FormItem>
     );
 };

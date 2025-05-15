@@ -45,7 +45,7 @@ const SideMenu: React.FC = () => {
                         filters.map((filter: any) => renderFilter(filter))
                     }
 
-                    <Button type="submit">Filtrar</Button>
+                    <Button type="submit" className="mt-4">Filtrar</Button>
                 </form>
             </Form>
         </aside>
