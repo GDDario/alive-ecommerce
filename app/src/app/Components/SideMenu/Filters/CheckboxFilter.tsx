@@ -23,7 +23,7 @@ const CheckboxFilter: React.FC<CheckboxFilterProps> = ({name, label, options, co
     }
 
     return (
-        <FormItem>
+        <FormItem className="mb-2">
             <FormLabel>{label}</FormLabel>
 
             <Controller
