@@ -6,6 +6,13 @@
 
 const HeadFiltersMock = (): any[] => [
     {
+        "type": "text",
+        "name": "name",
+        "label": "Nome",
+        "options": {
+        }
+    },
+    {
         "type": "range",
         "name": "price",
         "label": "Preço",
@@ -31,25 +38,25 @@ const HeadFiltersMock = (): any[] => [
             },
         ],
     },
-    // {
-    //     "type": "checkbox",
-    //     "name": "size",
-    //     "label": "Tamanhos",
-    //     "options": [
-    //         {
-    //             "label": "33",
-    //             "value": "33",
-    //             "quantity": 25,
-    //             "color": null,
-    //         },
-    //         {
-    //             "label": "34",
-    //             "value": "34",
-    //             "quantity": 45,
-    //             "color": null,
-    //         },
-    //     ],
-    // },
+    {
+        "type": "checkbox",
+        "name": "size",
+        "label": "Tamanhos",
+        "options": [
+            {
+                "label": "33",
+                "value": "33",
+                "quantity": 25,
+                "color": null,
+            },
+            {
+                "label": "34",
+                "value": "34",
+                "quantity": 45,
+                "color": null,
+            },
+        ],
+    },
     // {
     //     "type": "checkbox",
     //     "name": "gender",

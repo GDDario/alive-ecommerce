@@ -40,12 +40,14 @@ const SideMenu: React.FC = () => {
     return (
         <aside className="h-[85vh] min-w-[300px] glassy-panel sticky top-[8%] left-0 px-4 py-2 flex flex-col gap-4">
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit, onInvalid)}>
+                <form
+                    onSubmit={form.handleSubmit(onSubmit, onInvalid)}
+                >
                     {
                         filters.map((filter: any) => renderFilter(filter))
                     }
 
-                    <Button type="submit" className="mt-4">Filtrar</Button>
+                    <Button type="submit" className="mt-2">Filtrar</Button>
                 </form>
             </Form>
         </aside>
