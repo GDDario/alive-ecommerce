@@ -25,7 +25,7 @@ const HeadPage = () => {
 
     return (
         <main>
-            <h1 className="text-xl">Produtos de <span className="font-bold">cabeça</span></h1>
+            <h1 className="text-xl">Produtos de <span className="font-bold">pernas</span></h1>
 
             <hr className="my-4 w-full" />
 

@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
                 <LinkItem location="/categoria/cabeca" text="Cabeça"/>
                 <LinkItem location="/categoria/torso" text="Torso"/>
                 <LinkItem location="/categoria/pernas" text="Pernas"/>
-                <LinkItem location="/categorias/pes" text="Pés"/>
+                <LinkItem location="/categoria/pes" text="Pés"/>
             </ul>
         </div>
     );
